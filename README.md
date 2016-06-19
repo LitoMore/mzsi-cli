@@ -25,6 +25,9 @@ $ [sudo] npm install mzsi-cli --global
     	mzsi 07 07
 ```
 
+## Related
+- [mzsi](https://github.com/cauealves/mzsi) - Module used by this CLI.
+
 ## License
 
 MIT © [Cauê Alves](http://cauealves.com)
