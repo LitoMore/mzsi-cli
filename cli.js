@@ -9,14 +9,23 @@ const updateNotifier = require('update-notifier');
 
 updateNotifier({pkg}).notify();
 
-const day = parseInt(process.argv[2]);
-
 process.argv.forEach(function(arg){
   if (arg === '--version') {
     console.log(pkg.version);
     process.exit(0);
+  } else if (arg === '--help' || arg === 'help') {
+    console.log(`
+  ${chalk.cyan.bold('Usage:')}
+    mzsi <day> <month>
+      
+  ${chalk.blue.bold('Example:')}
+    mzsi 07 07
+`);
+    process.exit(0);
   }
 });
+
+const day = parseInt(process.argv[2]);
 
 if (isNaN(day)) {
   console.log(chalk.red.bold('Please, the day must be a number.'));

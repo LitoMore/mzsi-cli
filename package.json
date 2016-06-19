@@ -8,7 +8,12 @@
     "email": "cauealveseng@gmail.com",
     "url": "cauealves.com"
   },
-  "main": "cli.js",
+  "bin": {
+    "mzsi": "cli.js"
+  },
+  "files": [
+    "cli.js"
+  ],
   "scripts": {
     "test": "ava test.js"
   },
