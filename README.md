@@ -1,6 +1,6 @@
 # mzsi-cli [![Build Status](https://travis-ci.org/cauealves/mzsi-cli.svg?branch=master)](https://travis-ci.org/cauealves/mzsi-cli) [![Dependency Status](https://david-dm.org/cauealves/mzsi-cli.svg?style=flat-square)](https://david-dm.org/cauealves/mzsi-cli) [![Npm Package Version](https://img.shields.io/npm/v/mzsi-cli.svg?style=flat-square)](https://www.npmjs.org/package/mzsi-cli)
 
-> Check the score of a website analyzed by PageSpeed Insights.
+> Discovery your zodiac sign via command line using mzsi package.
 
 <br />
 

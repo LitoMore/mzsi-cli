@@ -1,6 +1,6 @@
 {
   "name": "mzsi-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Discovery your zodiac sign via command line using mzsi package.",
   "license": "MIT",
   "author": {
