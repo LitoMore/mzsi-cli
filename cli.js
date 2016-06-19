@@ -16,7 +16,7 @@ process.argv.forEach(function(arg){
   } else if (arg === '--help' || arg === 'help') {
     console.log(`
   ${chalk.cyan.bold('Usage:')}
-    mzsi <day> <month>
+    mzsi <month> <day>
       
   ${chalk.blue.bold('Example:')}
     mzsi 07 07
@@ -25,19 +25,21 @@ process.argv.forEach(function(arg){
   }
 });
 
-const day = parseInt(process.argv[2]);
+
+const month = parseInt(process.argv[2]);
+
+if (isNaN(month)) {
+  console.log(chalk.red.bold('Please, the month must be a number.'));
+  process.exit(1);
+}
+
+const day = parseInt(process.argv[3]);
 
 if (isNaN(day)) {
   console.log(chalk.red.bold('Please, the day must be a number.'));
   process.exit(1);
 }
 
-const month = parseInt(process.argv[3]);
-
-if (isNaN(month)) {
-  console.log(chalk.red.bold('Please, the month must be a number.'));
-  process.exit(1);
-}
 
 const sign = mzsi(month, day);
 
