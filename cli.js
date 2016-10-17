@@ -16,7 +16,7 @@ process.argv.forEach(function(arg){
   } else if (arg === '--help' || arg === 'help') {
     console.log(`
   ${chalk.cyan.bold('Usage:')}
-    mzsi <month> <day>
+    mzsi <month> <day> <language>
       
   ${chalk.blue.bold('Example:')}
     mzsi 07 07
@@ -40,13 +40,14 @@ if (isNaN(day)) {
   process.exit(1);
 }
 
+const languageTypeOf = typeof process.argv[4];
 
-const sign = mzsi(month, day);
+let language = 'en-us';
 
-if (sign.about.element == 'Water' || sign.about.element == 'Air') {
-  console.log(chalk.cyan.bold(`${sign.symbol} ${sign.name}`));
-} else if (sign.about.element == 'Fire') {
-  console.log(chalk.red.bold(`${sign.symbol} ${sign.name}`));
-} else if (sign.about.element == 'Earth') {
-  console.log(chalk.green.bold(`${sign.symbol} ${sign.name}`));
+if (languageTypeOf === 'string') {
+  language = process.argv[4];
 }
+
+const sign = mzsi(month, day, language);
+
+console.log(chalk.cyan.bold(`${sign.name}`));
