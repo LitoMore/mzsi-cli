@@ -19,10 +19,11 @@ $ [sudo] npm install mzsi-cli --global
 ## Usage
 ```
 	Usage:
-    	mzsi <month> <day>
+    	mzsi <month> <day> <language>
       
   	Example:
     	mzsi 07 07
+    	mssi 01 01 pt-br
 ```
 
 ## Related
